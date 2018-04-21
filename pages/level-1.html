@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>The Sweet Escape</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Eater" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="../assets/css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Modal -->
+    <div class="modal animated fadeIn" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="info-modal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="info-modal">Instructions</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close-info-button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <!-- Body -->
+          <div class="modal-body">
+            <p>-Find the hidden item in the picture based on the clue given in the riddle. You have 30 seconds to find the item before Mr. Pennywise will find you!</p>
+            <p>-You have 3 lives every level. Every wrong guess will deduct health points, so be careful. You have a 1 hint per level except for the last level.</p>
+            <p>-After you finished all the levels you will be rewarded.</p>
+          </div>
+          <!-- Footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn  btn-danger" data-toggle="modal" data-target="#exit-modal">Quit</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="close-info-button-2">Continue</button>
+          </div>
+          <!-- Exit Confirmation Modal -->
+            <div class="modal animated fadeIn" id="exit-modal" role="dialog" arialbelledby="exit-confirmation" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <h2 class="text-center">Are you sure you want to chicken out?</h2>  
+                        </div>
+                        <div class="modal-footer">
+                            <a href="../index.html" class="btn btn-primary">Yes</a>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <!-- /Exit Confirmation Modal -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="level-1-body">
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="d-flex justify-content-between">
+                    <!-- Hint -->
+                    <div id="hint-container">
+                        <label class="white-text" id="hint-label">Hint: <span id="hint">1</span></label>
+                        <i id="hint-button" class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                    </div>
+
+                    <!-- Timer -->
+                    <div id="timer-container">
+                        <p class="white-text" id="timer">60</p>
+                    </div>
+                    <!-- HealtPoints -->
+                    <div id="health-container">
+                        <ul class="list-unstyled d-flex justify-content-end pt-2">
+                            <li><i class="fa fa-heart red-text mr-1" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-heart red-text mr-1" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-heart red-text" aria-hidden="true"></i></li>
+                        </ul>
+                    </div>  
+                </div>
+            </div> 
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="fixed-bottom d-flex justify-content-end" id="bottom-contents">
+                    <div id="riddle-container" class="mr-3">
+                    <p class="white-text" id="riddle"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="misc-container">
+                        <i class="fa fa-gear white-text mt-3 mr-3" aria-hidden="true" id="settings" data-toggle="modal" data-target="#modal-settings"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+         <!-- Modal Settings -->
+        <div class="modal" id="modal-settings" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title"><i class="fa fa-gear" aria-hidden="true"></i>Settings</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h3>How to play</h3>
+                <p>-Find the hidden item in the picture based on the clue given in the riddle. You have 30 seconds to find the item before Mr. Pennywise will find you!</p>
+                <p>-You have 3 lives every level. Every wrong guess will deduct health points, so be careful. You have a 1 hint per level except for the last level.</p>
+                <p>-After you finished all the levels you will be rewarded.</p>
+                <h4>Designed by:  <span class="lead">Renzchler Oxiño</span></h4>
+                <h4>Powered by:  <span class="lead"><a href="">Tuitt</a></span></h4>
+                <div id="disc-container">
+                        <label>Disclaimer:</label>
+                        <p>CC0(Creative Common Zero)-> Liscense-> Free assets(images,audio,text,etc)</p>
+                   </div>
+
+              </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exit-modal-2">Quit</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Continue</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Exit Confirmation Modal -->
+            <div class="modal animated fadeIn" id="exit-modal-2" role="dialog" arialbelledby="exit-confirmation" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <h2 class="text-center">Are you sure you want to chicken out?</h2>  
+                        </div>
+                        <div class="modal-footer">
+                            <a href="../index.html" class="btn btn-primary">Yes</a>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <!-- /Exit Confirmation Modal -->
+     <!-- JQuery -->
+     <script type="text/javascript">
+         //Modal 
+         $(window).on('load', function(){
+            $('#info-modal').modal('show')
+         });
+
+
+         $(document).ready(function(){
+
+            $('#hint-button').click(function(){
+                $(this).css("color", "gray");
+                $("#hint").html('0');
+
+            });
+
+            //Timer
+            $('#close-info-button').click(timerCount());
+
+
+            //Settings
+
+         });//
+
+        function timerCount(){
+            var counter = 60;
+            setInterval(function() {
+            counter--;
+            if (counter >= 0) {
+              span = document.getElementById("timer");
+              span.innerHTML = counter;
+            }
+            // Display 'counter' wherever you want to display it.
+            if (counter === 0) {
+                alert('this is where it happens');
+                clearInterval(counter);
+            }
+            
+          }, 1000);
+        }
+
+     </script>
+    <script type="text/javascript" src="../assets/js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../assets/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../assets/js/mdb.min.js"></script>
+</body>
+
+</html>

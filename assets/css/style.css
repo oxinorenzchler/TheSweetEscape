@@ -1,0 +1,81 @@
+/*CSS Reset*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/*User Defined*/
+:root{
+	--eater: 'Eater', cursive;
+	--roboto: 'Roboto', sans-serif;
+}
+
+/*Landing Page*/
+#landing-wrapper{
+	font-family: var(--eater);
+	height: 100vh;
+	background-image: url('../img/landing-bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#the{
+	font-size: 10em;
+	text-shadow: 1px 1px 1px #000;
+}
+#title{
+	font-size: 10em;
+	text-shadow: 1px 1px 1px #000;
+}
+#play-button{
+	font-size: 2em;
+	font-family: var(--roboto);
+	text-transform: none;
+	border: 1px solid #fff;
+}
+
+/*Level 1*/
+#info-modal{
+	text-transform: uppercase;
+}
+.modal-body > p{
+	text-transform: none;
+	font-weight: bold;
+}
+#level-1-body{
+	background-image: url(../img/level-1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+#hint-label,
+#hint{
+	font-size: 1.5em;
+	text-shadow: 2px 2px 2px #000;
+}
+#hint-button{
+	cursor: pointer;
+	color: yellow;
+}
+#timer{
+	font-size: 5em;
+	text-shadow: 2px 2px 2px #000;
+}
+.fa{
+	font-size: 2em;
+}
+#riddle-container{
+	background-color: rgba(0,0,0,0.4);
+	padding: 25px 20px 10px 20px;
+	border-radius: 5px;
+}
+#riddle{
+	text-shadow: 1px 1px 1px #000;
+}
+#settings{
+	font-size: 3em;
+	text-shadow: 2px 2px 2px #000;
+	cursor: pointer;
+}
+#disc-container{
+	
+}
