@@ -64,7 +64,7 @@
       </div>
     </div>
 
-    <div class="container-fluid" id="level-1-body">
+    <div class="container-fluid" id="level-2-body">
         <div class="row">
             <div class="col-md-12 col-lg-12">
                 <div class="d-flex justify-content-between">
@@ -92,11 +92,11 @@
 
         <!-- Images -->
         <div id="img-container">
-            <img src="../assets/img/hammer.png" id="hammer">
-            <img src="../assets/img/ball.png" id="ball">
-            <img src="../assets/img/car.png" id="car">
-            <img src="../assets/img/bottle.png" id="bottle">
-            <img src="../assets/img/rat.png" id="rat">
+            <img src="../assets/img/yoyo.png" id="yoyo">
+            <img src="../assets/img/soda.png" id="soda">
+            <img src="../assets/img/clock.png" id="clock">
+            <img src="../assets/img/knife.png" id="knife">
+            <img src="../assets/img/toaster.png" id="toaster">
         </div>
          
         <!-- Pennywise -->
@@ -114,7 +114,7 @@
             <div class="col-md-12 col-lg-12">
                 <div class="fixed-bottom d-flex justify-content-end" id="bottom-contents">
                     <div id="riddle-container" class="mr-3">
-                    <p class="white-text" id="riddle">Though I’m not an elephant I am something with a trunk If I get old and rusty You might sell me off as junk</p>
+                    <p class="white-text" id="riddle">I have a face that does not smile or frown. I have no mouth, but I make a familiar sound. I have hands, but fingers I do not.</p>
                     </div>
                     <div class="misc-container">
                         <i class="fa fa-gear white-text mt-3 mr-3" aria-hidden="true" id="settings" data-toggle="modal" data-target="#modal-settings"></i>
@@ -190,7 +190,7 @@
                 });
                 }
 
-                $('#car').animate({
+                $('#clock').animate({
                   opacity : '1'
                 },2000).css("background", "white").css("border-radius", "50%");
 
@@ -206,8 +206,8 @@
             });
 
             //Image
-            // Hammer
-            $('#hammer').click(function(){
+            // Knife
+            $('#knife').click(function(){
               $(this).data('clicked', true);
                 if ($(this).data('clicked')) {
                    $(this).hide();
@@ -227,8 +227,8 @@
                 }
             });
 
-            //Ball
-           $('#ball').click(function(){
+            //Toaster
+           $('#toaster').click(function(){
               $(this).data('clicked', true);
                 if ($(this).data('clicked')) {
                    $(this).hide();
@@ -248,18 +248,18 @@
                 }
             });
 
-           //Car
-           $('#car').click(function(){
+           //Clock
+           $('#clock').click(function(){
               $(this).data('clicked', true);
                 if ($(this).data('clicked')) {
                    $(this).hide();
-                   alert('Awesome! Now hurry up! I can hear footsteps');
-                   window.location.href = "level-2.html";
+                   alert('Almost there! Run! Run! Run!');
+                   window.location.href = "level-3.html";
                 }
             });
 
-            //Rat
-            $('#rat').click(function(){
+            //Soda
+            $('#soda').click(function(){
               $(this).data('clicked', true);
                 if ($(this).data('clicked')) {
                    $(this).hide();
@@ -280,8 +280,8 @@
                 }
             });
         
-            // Bottle
-            $('#bottle').click(function(){
+            //Yoyo
+            $('#yoyo').click(function(){
               $(this).data('clicked', true);
                 if ($(this).data('clicked')) {
                    $(this).hide();

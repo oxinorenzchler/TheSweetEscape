@@ -64,14 +64,13 @@
       </div>
     </div>
 
-    <div class="container-fluid" id="level-1-body">
+    <div class="container-fluid" id="level-3-body">
         <div class="row">
             <div class="col-md-12 col-lg-12">
                 <div class="d-flex justify-content-between">
                     <!-- Hint -->
                     <div id="hint-container">
-                        <label class="white-text" id="hint-label">Hint: <span id="hint">1</span></label>
-                        <i id="hint-button" class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                       
                     </div>
 
                     <!-- Timer -->
@@ -92,11 +91,9 @@
 
         <!-- Images -->
         <div id="img-container">
-            <img src="../assets/img/hammer.png" id="hammer">
-            <img src="../assets/img/ball.png" id="ball">
-            <img src="../assets/img/car.png" id="car">
-            <img src="../assets/img/bottle.png" id="bottle">
-            <img src="../assets/img/rat.png" id="rat">
+            <img src="../assets/img/doll.png" id="doll">
+            <img src="../assets/img/mask.png" id="mask">
+            <img src="../assets/img/saporo.png" id="saporo">
         </div>
          
         <!-- Pennywise -->
@@ -114,7 +111,7 @@
             <div class="col-md-12 col-lg-12">
                 <div class="fixed-bottom d-flex justify-content-end" id="bottom-contents">
                     <div id="riddle-container" class="mr-3">
-                    <p class="white-text" id="riddle">Though I’m not an elephant I am something with a trunk If I get old and rusty You might sell me off as junk</p>
+                    <p class="white-text" id="riddle">First off all you can't see me because you're above Me. I hide in the shadows. Actually, you can drag me. I'm your most beautiful nightmare. -Saporo</p>
                     </div>
                     <div class="misc-container">
                         <i class="fa fa-gear white-text mt-3 mr-3" aria-hidden="true" id="settings" data-toggle="modal" data-target="#modal-settings"></i>
@@ -181,21 +178,6 @@
 
             $('#pennywise-container').hide();
 
-            $('#hint-button').click(function(){
-                $(this).css("color", "gray");
-                $("#hint").html('0');
-                if($('#hint').html('0')){
-                  $(this).click(function(){
-                  alert('No available hints please reload.');
-                });
-                }
-
-                $('#car').animate({
-                  opacity : '1'
-                },2000).css("background", "white").css("border-radius", "50%");
-
-                        
-            });
 
             //Timer
             $('#close-info-button').click(timerCount());
@@ -206,8 +188,8 @@
             });
 
             //Image
-            // Hammer
-            $('#hammer').click(function(){
+            // Doll
+            $('#doll').click(function(){
               $(this).data('clicked', true);
                 if ($(this).data('clicked')) {
                    $(this).hide();
@@ -227,8 +209,8 @@
                 }
             });
 
-            //Ball
-           $('#ball').click(function(){
+            //Toaster
+           $('#toaster').click(function(){
               $(this).data('clicked', true);
                 if ($(this).data('clicked')) {
                    $(this).hide();
@@ -248,18 +230,18 @@
                 }
             });
 
-           //Car
-           $('#car').click(function(){
+           //Clock
+           $('#saporo').click(function(){
               $(this).data('clicked', true);
                 if ($(this).data('clicked')) {
                    $(this).hide();
-                   alert('Awesome! Now hurry up! I can hear footsteps');
-                   window.location.href = "level-2.html";
+                   alert('WhoooooooHOOOOOOO! Congratulations!');
+                   window.location.href = "congratulations.html";
                 }
             });
 
-            //Rat
-            $('#rat').click(function(){
+            //Soda
+            $('#soda').click(function(){
               $(this).data('clicked', true);
                 if ($(this).data('clicked')) {
                    $(this).hide();
@@ -280,8 +262,8 @@
                 }
             });
         
-            // Bottle
-            $('#bottle').click(function(){
+            //Yoyo
+            $('#yoyo').click(function(){
               $(this).data('clicked', true);
                 if ($(this).data('clicked')) {
                    $(this).hide();

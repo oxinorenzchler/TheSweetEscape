@@ -3,7 +3,7 @@ The Sweet Escape
 -Based on the movie IT, the player will have to unlock all levels to escape Mr. Pennywise.
 
 How to play
--Find the hidden item in the picture based on the clue given in the riddle. You have 30 seconds to find the item before Mr. Pennywise will find you!
+-Find the hidden item in the picture based on the clue given in the riddle. You have 60 seconds to find the item before Mr. Pennywise will find you!
 
 -You have 3 lives every level. Every wrong guess will deduct health points, so be careful. You have a 1 hint per level except for the last level.
 

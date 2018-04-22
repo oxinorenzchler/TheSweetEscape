@@ -76,6 +76,97 @@
 	text-shadow: 2px 2px 2px #000;
 	cursor: pointer;
 }
-#disc-container{
-	
+/*Images*/
+#hammer{
+	position: absolute;
+	top: 80%;
+}
+#ball{
+	position: absolute;
+ 	top: 75%;
+ 	left: 42%;
+}
+#pennywise-container{
+	opacity: 0.5
+}
+#gameover{
+	position: absolute;
+	top: -10%;
+}
+#car{
+	opacity: 0.2;
+}
+#bottle{
+	position: absolute;
+	top: 70%;
+	left: 90%;
+}
+#rat{
+	position: absolute;
+	top: -2%;
+	left: 80%;
+}
+
+/*Level-2*/
+#level-2-body{
+	background-image: url(../img/level-2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+#knife{
+	position: absolute;
+	top: 58%;
+	left: 90%;
+}
+#toaster{
+	position: absolute;
+	top: 17%;
+	left: 75%;
+}
+#soda{
+	position: absolute;
+ 	top: 75%;
+ 	left: 42%;
+}
+#yoyo{
+	position: absolute;
+	top: 50%;
+}
+#clock{
+	position: absolute;
+	opacity: 0.1;
+	left: 40%;
+}
+
+/*Level 3*/
+#level-3-body{
+	background-image: url(../img/level-3.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+#doll{
+	position: absolute;
+	top: 80%;
+}
+#mask{
+	position: absolute;
+	top: 10%;
+	left: 80%;
+}
+#saporo{
+	position: absolute;
+	opacity: 0;
+	left: 40%;
+}
+/*Congratulations Page*/
+#congrats-container{
+	height: 100vh;
+	background-image: url('../img/congrats-bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.shadow-effect{
+	text-shadow: 1px 1px 1px #000;
 }

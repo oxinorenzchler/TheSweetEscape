@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>The Sweet Escape</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Eater" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="../assets/css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+
+   
+    <div class="flex-center flex-column" id="congrats-container">
+      <div class="jumbotron bg-transparent text-center shadow-effect">
+          <h1 class="animated fadeIn">Thank you for playing</h1>
+          <p class="animated fadeIn lead">Designer: <span class="badge badge-primary"> Renzchler Oxiño</span></p>
+          <a href="../index.html" class="btn bg-transparent">Play again</a>
+      </div>
+    </div>
+
+
+
+     <!-- JQuery -->
+     <script type="text/javascript">
+         //Modal 
+         $(window).on('load', function(){
+            $('#info-modal').modal('show')
+         });
+
+
+         $(document).ready(function(){
+
+            $('#pennywise-container').hide();
+
+
+            //Timer
+            $('#close-info-button').click(timerCount());
+
+            //Playagain
+            $('#play-again').click(function (){
+                location.reload();
+            });
+
+            //Image
+            // Doll
+            $('#doll').click(function(){
+              $(this).data('clicked', true);
+                if ($(this).data('clicked')) {
+                   $(this).hide();
+                   alert('Wrong answer!');
+                   //Check if hp is displayed
+                   if($('#hp-1').is(':visible') && $('#hp-2').is(':visible') && $('#hp-3').is(':visible')){
+                        $('#hp-1').hide();
+                   }else if(!($('#hp-1').is(':visible')) && $('#hp-2').is(':visible') && $('#hp-2').is(':visible')){
+                        $('#hp-2').hide();
+                   }else if(!($('#hp-1').is(':visible')) && !($('#hp-2').is(':visible')) && $('#hp-3').is(':visible')){
+                        $('#hp-3').hide();
+                         $('#pennywise-container').show();
+                        $('#pennywise-container').animate({
+                          opacity: '1'
+                        },2000);
+                   }
+                }
+            });
+
+            //Toaster
+           $('#toaster').click(function(){
+              $(this).data('clicked', true);
+                if ($(this).data('clicked')) {
+                   $(this).hide();
+                   alert('Wrong answer!');
+                   //Check if hp is displayed
+                   if($('#hp-1').is(':visible') && $('#hp-2').is(':visible') && $('#hp-3').is(':visible')){
+                        $('#hp-1').hide();
+                   }else if(!($('#hp-1').is(':visible')) && $('#hp-2').is(':visible') && $('#hp-2').is(':visible')){
+                        $('#hp-2').hide();
+                   }else if(!($('#hp-1').is(':visible')) && !($('#hp-2').is(':visible')) && $('#hp-3').is(':visible')){
+                        $('#hp-3').hide();
+                         $('#pennywise-container').show();
+                        $('#pennywise-container').animate({
+                          opacity: '1'
+                        },2000);
+                   }
+                }
+            });
+
+           //Clock
+           $('#saporo').click(function(){
+              $(this).data('clicked', true);
+                if ($(this).data('clicked')) {
+                   $(this).hide();
+                   alert('WhoooooooHOOOOOOO! Congratulations!');
+                   window.location.href = "congratulations.html";
+                }
+            });
+
+            //Soda
+            $('#soda').click(function(){
+              $(this).data('clicked', true);
+                if ($(this).data('clicked')) {
+                   $(this).hide();
+                   alert('Wrong answer!');
+                   //Check if hp is displayed
+                   if($('#hp-1').is(':visible') && $('#hp-2').is(':visible') && $('#hp-3').is(':visible')){
+                        $('#hp-1').hide();
+                   }else if(!($('#hp-1').is(':visible')) && $('#hp-2').is(':visible') && $('#hp-2').is(':visible')){
+                        $('#hp-2').hide();
+                   }else if(!($('#hp-1').is(':visible')) && !($('#hp-2').is(':visible')) && $('#hp-3').is(':visible')){
+                        $('#hp-3').hide();
+                         $('#pennywise-container').show();
+                        $('#pennywise-container').animate({
+                          opacity: '1'
+                        },2000);
+
+                   }
+                }
+            });
+        
+            //Yoyo
+            $('#yoyo').click(function(){
+              $(this).data('clicked', true);
+                if ($(this).data('clicked')) {
+                   $(this).hide();
+                   alert('Wrong answer!');
+                   //Check if hp is displayed
+                   if($('#hp-1').is(':visible') && $('#hp-2').is(':visible') && $('#hp-3').is(':visible')){
+                        $('#hp-1').hide();
+                   }else if(!($('#hp-1').is(':visible')) && $('#hp-2').is(':visible') && $('#hp-2').is(':visible')){
+                        $('#hp-2').hide();
+                   }else if(!($('#hp-1').is(':visible')) && !($('#hp-2').is(':visible')) && $('#hp-3').is(':visible')){
+                        $('#hp-3').hide();
+                         $('#pennywise-container').show();
+                        $('#pennywise-container').animate({
+                          opacity: '1'
+                        },2000);
+
+                   }
+                }
+            });
+
+         });//end
+
+         //Vanilla Timer
+        function timerCount(){
+            var counter = 60;
+            setInterval(function() {
+            counter--;
+            if (counter >= 0) {
+              span = document.getElementById("timer");
+              span.innerHTML = counter;
+            }
+            // Display 'counter' wherever you want to display it.
+            if (counter === 0) {
+                 $('#pennywise-container').show();
+                        $('#pennywise-container').animate({
+                          opacity: '1'
+                        },2000);
+                clearInterval(counter);
+            }
+            
+          }, 1000);
+        }
+
+     </script>
+    <script type="text/javascript" src="../assets/js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../assets/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../assets/js/mdb.min.js"></script>
+</body>
+
+</html>
