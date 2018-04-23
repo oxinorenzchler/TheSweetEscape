@@ -34,9 +34,16 @@
             </div>
        </div>
     </div>
+    <audio src="assets/audio/pennywise.mp3" id="audio"></audio>
     <!-- /Main Wrapper-->
 
     <!-- SCRIPTS -->
+    <script type="text/javascript">
+       $(window).on('load', function(){
+            var audio = document.getElementById("audio");
+            audio.play();
+       });
+    </script>
     <!-- JQuery -->
     <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap tooltips -->
