@@ -94,6 +94,7 @@
             <img src="../assets/img/doll.png" id="doll">
             <img src="../assets/img/mask.png" id="mask">
             <img src="../assets/img/saporo.png" id="saporo">
+            <img src="../assets/img/bat.png" id="bat">
         </div>
          
         <!-- Pennywise -->
@@ -209,8 +210,8 @@
                 }
             });
 
-            //Toaster
-           $('#toaster').click(function(){
+            //Mask
+           $('#mask').click(function(){
               $(this).data('clicked', true);
                 if ($(this).data('clicked')) {
                    $(this).hide();
@@ -230,7 +231,7 @@
                 }
             });
 
-           //Clock
+           //Saporo
            $('#saporo').click(function(){
               $(this).data('clicked', true);
                 if ($(this).data('clicked')) {
@@ -240,8 +241,8 @@
                 }
             });
 
-            //Soda
-            $('#soda').click(function(){
+            //Bat
+            $('#bat').click(function(){
               $(this).data('clicked', true);
                 if ($(this).data('clicked')) {
                    $(this).hide();
@@ -262,27 +263,6 @@
                 }
             });
         
-            //Yoyo
-            $('#yoyo').click(function(){
-              $(this).data('clicked', true);
-                if ($(this).data('clicked')) {
-                   $(this).hide();
-                   alert('Wrong answer!');
-                   //Check if hp is displayed
-                   if($('#hp-1').is(':visible') && $('#hp-2').is(':visible') && $('#hp-3').is(':visible')){
-                        $('#hp-1').hide();
-                   }else if(!($('#hp-1').is(':visible')) && $('#hp-2').is(':visible') && $('#hp-2').is(':visible')){
-                        $('#hp-2').hide();
-                   }else if(!($('#hp-1').is(':visible')) && !($('#hp-2').is(':visible')) && $('#hp-3').is(':visible')){
-                        $('#hp-3').hide();
-                         $('#pennywise-container').show();
-                        $('#pennywise-container').animate({
-                          opacity: '1'
-                        },2000);
-
-                   }
-                }
-            });
 
          });//end
 
