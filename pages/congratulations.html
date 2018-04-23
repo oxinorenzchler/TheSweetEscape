@@ -24,7 +24,7 @@
 
 <body>
 
-   
+    <audio src="../assets/audio/pating.mp3" id="audio"></audio>
     <div class="flex-center flex-column" id="congrats-container">
       <div class="jumbotron bg-transparent text-center shadow-effect">
           <h1 class="animated fadeIn">Thank you for playing</h1>
@@ -40,7 +40,8 @@
      <script type="text/javascript">
          //Modal 
          $(window).on('load', function(){
-            $('#info-modal').modal('show')
+            var audio = document.getElementById("audio");
+            audio.play();
          });
 
 

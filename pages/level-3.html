@@ -23,7 +23,7 @@
 </head>
 
 <body>
-
+    <audio src="../assets/audio/horror.mp3" id="audio"></audio>
     <!-- Modal -->
     <div class="modal animated fadeIn" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="info-modal" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -172,6 +172,8 @@
          //Modal 
          $(window).on('load', function(){
             $('#info-modal').modal('show')
+            var audio = document.getElementById("audio");
+            audio.play();
          });
 
 
